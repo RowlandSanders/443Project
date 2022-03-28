@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js";
 import { getFirestore, addDoc, collection, getDocs, query, where, updateDoc} 
 from "https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js";
 
@@ -27,7 +28,7 @@ document.addEventListener('submit', function login(e) {
     .then((userCredential) => {
     // Signed in
         const user = userCredential.user;
-        window.location.replace("testSucc.html");
+        window.location.replace("base.html");
     // ...
     })
     .catch((error) => {
